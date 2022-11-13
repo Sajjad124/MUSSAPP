@@ -13,15 +13,31 @@ function App() {
     <div className="App">
       <div className="main-div">
         <Button variant="text">Text</Button>
-        <Button startIcon={<Settings />} variant="contained" color="secondary">Settings</Button>
-        <Button startIcon={<Add />} variant="contained" color="success">Add new post</Button>
+        <Button startIcon={<Settings />} variant="contained" color="secondary">
+          Settings
+        </Button>
+        <Button startIcon={<Add />} variant="contained" color="success">
+          Add new post
+        </Button>
         <Button variant="outlined" size="small">
           Outlined
         </Button>
-
-        <Typography variant="h1" component="h2">
-        h1. Heading
-      </Typography>;
+        <Typography variant="h2" component="p">
+          it uses h2 style but its a paragraph tag
+        </Typography>
+        ;
+        <Button
+          variant="contained"
+          sx={{
+            backgroundColor: "skyblue",
+            color: "#888",
+            margin: 5,
+            "&:hover": { backgroundColor: "lightblue" },
+            "&:disabled": { backgroundColor: "gray", color: "white" },
+          }}
+        >
+          My Unique Button
+        </Button>
       </div>
     </div>
   );
