@@ -1,5 +1,7 @@
-import logo from "./logo.svg";
-import "./App.css";
+import * as React from "react";
+import Button from "@mui/material/Button";
+import { Add, Settings } from "@mui/icons-material";
+import { Typography } from "@mui/material";
 
 import "@fontsource/roboto/300.css";
 import "@fontsource/roboto/400.css";
@@ -9,20 +11,18 @@ import "@fontsource/roboto/700.css";
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="main-div">
+        <Button variant="text">Text</Button>
+        <Button startIcon={<Settings />} variant="contained" color="secondary">Settings</Button>
+        <Button startIcon={<Add />} variant="contained" color="success">Add new post</Button>
+        <Button variant="outlined" size="small">
+          Outlined
+        </Button>
+
+        <Typography variant="h1" component="h2">
+        h1. Heading
+      </Typography>;
+      </div>
     </div>
   );
 }
