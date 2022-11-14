@@ -1,14 +1,22 @@
 import * as React from "react";
-import Button from "@mui/material/Button";
 import { Add, Settings } from "@mui/icons-material";
-import { Typography } from "@mui/material";
+import { Typography, Button } from "@mui/material";
 
 import "@fontsource/roboto/300.css";
 import "@fontsource/roboto/400.css";
 import "@fontsource/roboto/500.css";
 import "@fontsource/roboto/700.css";
+import styled from "@emotion/styled";
 
 function App() {
+  const BlueButton = styled(Button)({
+    backgroundColor: "skyblue",
+    color: "#888",
+    margin: 5,
+    "&:hover": { backgroundColor: "lightblue" },
+    "&:disabled": { backgroundColor: "gray", color: "white" },
+  });
+
   return (
     <div className="App">
       <div className="main-div">
@@ -38,6 +46,8 @@ function App() {
         >
           My Unique Button
         </Button>
+        <BlueButton variant="contained">My Button</BlueButton>
+        <BlueButton variant="contained">My Button</BlueButton>
       </div>
     </div>
   );
