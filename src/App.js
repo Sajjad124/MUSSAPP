@@ -11,7 +11,7 @@ import styled from "@emotion/styled";
 
 function App() {
   const BlueButton = styled(Button)(({ theme }) => ({
-    backgroundColor: theme.palette.secondary.main,
+    backgroundColor: "#000",
     color: "#888",
     margin: 5,
     "&:hover": { backgroundColor: "lightblue" },
@@ -22,7 +22,7 @@ function App() {
     <div className="App">
       <div className="main-div">
         <Button variant="text">Text</Button>
-        <Button startIcon={<Settings />} variant="contained" color="OtherColor">
+        <Button startIcon={<Settings />} variant="contained" color="primary">
           Settings
         </Button>
         <Button startIcon={<Add />} variant="contained" color="success">
@@ -34,7 +34,6 @@ function App() {
         <Typography variant="h2" component="p">
           it uses h2 style but its a paragraph tag
         </Typography>
-        {/* ; */}
         <Button
           variant="contained"
           sx={{
@@ -47,6 +46,7 @@ function App() {
         >
           My Unique Button
         </Button>
+        <BlueButton variant="contained">My Button</BlueButton>
         <BlueButton variant="contained">My Button</BlueButton>
       </div>
     </div>
