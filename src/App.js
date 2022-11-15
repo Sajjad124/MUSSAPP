@@ -1,22 +1,27 @@
 import * as React from "react";
-import theme from "./theme";
-
-import "@fontsource/roboto/300.css";
-import "@fontsource/roboto/400.css";
-import "@fontsource/roboto/500.css";
-import "@fontsource/roboto/700.css";
-import styled from "@emotion/styled";
 import Sidebar from "./Components/Sidebar";
 import Feed from "./Components/Feed";
 import RightBar from "./Components/RightBar";
+import { Box, Stack } from "@mui/material";
+
+// import theme from "./theme";
+// import "@fontsource/roboto/300.css";
+// import "@fontsource/roboto/400.css";
+// import "@fontsource/roboto/500.css";
+// import "@fontsource/roboto/700.css";
+// import styled from "@emotion/styled";
 
 function App() {
-  return;
-  <div className="App">
-    <Sidebar />
-    <Feed />
-    <RightBar />
-  </div>;
+  return (
+    <Box>
+      {/* navbar */}
+      <Stack direction="row" spacing={2} justifyContent="space-evenly">
+        <Sidebar />
+        <Feed />
+        <RightBar />
+      </Stack>
+    </Box>
+  );
 }
 export default App;
 

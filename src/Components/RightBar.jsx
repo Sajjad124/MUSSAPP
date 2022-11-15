@@ -1,8 +1,9 @@
+import { Box } from '@mui/material'
 import React from 'react'
 
 const RightBar = () => {
   return (
-    <div>RightBar</div>
+    <Box bgcolor="gray">RightBar</Box>
   )
 }
 
