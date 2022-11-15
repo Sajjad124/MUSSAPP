@@ -6,9 +6,17 @@ import "@fontsource/roboto/400.css";
 import "@fontsource/roboto/500.css";
 import "@fontsource/roboto/700.css";
 import styled from "@emotion/styled";
+import Sidebar from "./Components/Sidebar";
+import Feed from "./Components/Feed";
+import RightBar from "./Components/RightBar";
 
 function App() {
-  return <div className="App">MUSS App</div>;
+  return;
+  <div className="App">
+    <Sidebar />
+    <Feed />
+    <RightBar />
+  </div>;
 }
 export default App;
 
