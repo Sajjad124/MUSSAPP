@@ -1,3 +1,4 @@
+import { VolunteerActivismRounded } from "@mui/icons-material";
 import { AppBar, styled, Toolbar, Typography } from "@mui/material";
 import React from "react";
 
@@ -10,7 +11,12 @@ const Navbar = () => {
   return (
     <AppBar position="sticky">
       <StyledToolbar>
-        <Typography variant="h6">MussApp</Typography>
+        <Typography variant="h6" sx={{ display: { xs: "none", sm: "block" } }}>
+          MussApp
+        </Typography>
+        <VolunteerActivismRounded
+          sx={{ display: { xs: "block", sm: "none" } }}
+        />
       </StyledToolbar>
     </AppBar>
   );
