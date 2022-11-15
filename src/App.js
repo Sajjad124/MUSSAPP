@@ -3,6 +3,7 @@ import Sidebar from "./Components/Sidebar";
 import Feed from "./Components/Feed";
 import RightBar from "./Components/RightBar";
 import { Box, Stack } from "@mui/material";
+import Navbar from "./Components/Navbar";
 
 // import theme from "./theme";
 // import "@fontsource/roboto/300.css";
@@ -14,7 +15,7 @@ import { Box, Stack } from "@mui/material";
 function App() {
   return (
     <Box>
-      {/* navbar */}
+      <Navbar/>
       <Stack direction="row" spacing={2} justifyContent="space-between">
         <Sidebar />
         <Feed />
