@@ -8,7 +8,7 @@ import "@fontsource/roboto/700.css";
 import styled from "@emotion/styled";
 
 function App() {
-  return <div className="App">Start App</div>;
+  return <div className="App">MUSS App</div>;
 }
 export default App;
 
