@@ -131,7 +131,10 @@ const Navbar = () => {
           <SettingsRounded />
           Settings
         </MenuItem>
-        <MenuItem><Logout/>Logout</MenuItem>
+        <MenuItem>
+          <Logout />
+          Logout
+        </MenuItem>
       </Menu>
     </AppBar>
   );
