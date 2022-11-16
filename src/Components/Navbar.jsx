@@ -23,7 +23,7 @@ const Navbar = () => {
           MussApp
         </Typography>
         <VolunteerActivismRounded
-          sx={{ display: { xs: "block", sm: "none" } }}
+          sx={{ width:"30px", height:"30px" ,display: { xs: "block", sm: "none" } }}
         />
         <Search>
           <InputBase placeholder="search..." />
