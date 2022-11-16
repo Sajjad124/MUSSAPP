@@ -29,8 +29,9 @@ const StyledToolbar = styled(Toolbar)({
 const Search = styled("div")(({ theme }) => ({
   backgroundColor: "white",
   padding: "0 10px",
-  borderRadius: theme.shape.borderRadius,
-  width: "40%",
+  borderRadius: "40px",
+  alignItems: "center",
+  width: "20%",
 }));
 const Icons = styled(Box)(({ theme }) => ({
   display: "none",
@@ -56,7 +57,10 @@ const Navbar = () => {
   return (
     <AppBar position="sticky">
       <StyledToolbar>
-        <Typography variant="h6" sx={{ display: { xs: "none", sm: "block" } }}>
+        <Typography
+          variant="h5"
+          sx={{ display: { xs: "none", sm: "block", alignItems: "center" } }}
+        >
           MussApp
         </Typography>
         <VolunteerActivismRounded
@@ -66,7 +70,7 @@ const Navbar = () => {
             display: { xs: "block", sm: "none" },
           }}
         />
-        <Search>
+        <Search sx={{}}>
           <InputBase placeholder="search..." />
         </Search>
         <Icons>
