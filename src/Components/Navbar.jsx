@@ -1,8 +1,11 @@
 import {
+  Logout,
   Mail,
   Notifications,
+  SettingsRounded,
   VolunteerActivismRounded,
 } from "@mui/icons-material";
+import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import {
   AppBar,
   styled,
@@ -12,8 +15,11 @@ import {
   Badge,
   Avatar,
   Box,
+  Menu,
+  MenuItem,
 } from "@mui/material";
-import React from "react";
+
+import React, { useState } from "react";
 import user from "../Images/user.jpg";
 
 const StyledToolbar = styled(Toolbar)({
@@ -45,6 +51,8 @@ const UserBox = styled(Box)(({ theme }) => ({
 }));
 
 const Navbar = () => {
+  const [open, setOpen] = useState(false);
+
   return (
     <AppBar position="sticky">
       <StyledToolbar>
@@ -85,12 +93,13 @@ const Navbar = () => {
             <Notifications />
           </Badge>
           <Avatar
-            sx={{ width: "30px", height: "30px" }}
+            sx={{ width: "35px", height: "35px" }}
             alt="Remy Sharp"
             src={user}
+            onClick={(e) => setOpen(true)}
           />
         </Icons>
-        <UserBox>
+        <UserBox onClick={(e) => setOpen(true)}>
           <Avatar
             sx={{ width: "30px", height: "30px" }}
             alt="Remy Sharp"
@@ -99,6 +108,31 @@ const Navbar = () => {
           <Typography variant="span">Sajjad</Typography>
         </UserBox>
       </StyledToolbar>
+      <Menu
+        id="demo-positioned-menu"
+        aria-labelledby="demo-positioned-button"
+        open={open}
+        onClose={(e) => setOpen(false)}
+        anchorOrigin={{
+          vertical: "top",
+          horizontal: "right",
+        }}
+        transformOrigin={{
+          vertical: "top",
+          horizontal: "right",
+        }}
+        sx={{ marginTop: "40px" }}
+      >
+        <MenuItem>
+          <AccountCircleIcon />
+          Profile
+        </MenuItem>
+        <MenuItem>
+          <SettingsRounded />
+          Settings
+        </MenuItem>
+        <MenuItem><Logout/>Logout</MenuItem>
+      </Menu>
     </AppBar>
   );
 };
