@@ -28,7 +28,7 @@ const Search = styled("div")(({ theme }) => ({
 }));
 const Icons = styled(Box)(({ theme }) => ({
   display: "none",
-  gap: "20px",
+  gap: "10px",
   alignItems: "center",
   [theme.breakpoints.up("sm")]: {
     display: "flex",
@@ -62,10 +62,26 @@ const Navbar = () => {
           <InputBase placeholder="search..." />
         </Search>
         <Icons>
-          <Badge badgeContent={4} color="error">
+          <Badge
+            badgeContent={4}
+            color="error"
+            sx={{
+              backgroundColor: "rgba(0,0,0,0.5)",
+              borderRadius: "50%",
+              padding: "5px",
+            }}
+          >
             <Mail />
           </Badge>
-          <Badge badgeContent={3} color="error">
+          <Badge
+            badgeContent={3}
+            color="error"
+            sx={{
+              backgroundColor: "rgba(0,0,0,0.5)",
+              borderRadius: "50%",
+              padding: "5px",
+            }}
+          >
             <Notifications />
           </Badge>
           <Avatar
