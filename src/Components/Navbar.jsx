@@ -1,5 +1,18 @@
-import {Mail, Notifications, VolunteerActivismRounded, } from "@mui/icons-material";
-import { AppBar,styled, Toolbar,Typography, InputBase, Badge, Avatar, } from "@mui/material";
+import {
+  Mail,
+  Notifications,
+  VolunteerActivismRounded,
+} from "@mui/icons-material";
+import {
+  AppBar,
+  styled,
+  Toolbar,
+  Typography,
+  InputBase,
+  Badge,
+  Avatar,
+  Box,
+} from "@mui/material";
 import React from "react";
 import user from "../Images/user.jpg";
 
@@ -13,7 +26,23 @@ const Search = styled("div")(({ theme }) => ({
   borderRadius: theme.shape.borderRadius,
   width: "40%",
 }));
-const Icons = styled("Box")(({ theme }) => ({display:"flex", gap:"20px", alignItems:"center"}));
+const Icons = styled(Box)(({ theme }) => ({
+  display: "none",
+  gap: "20px",
+  alignItems: "center",
+  [theme.breakpoints.up("sm")]: {
+    display: "flex",
+  },
+}));
+
+const UserBox = styled(Box)(({ theme }) => ({
+  display: "flex",
+  gap: "10px",
+  alignItems: "center",
+  [theme.breakpoints.up("sm")]: {
+    display: "none",
+  },
+}));
 
 const Navbar = () => {
   return (
@@ -23,7 +52,11 @@ const Navbar = () => {
           MussApp
         </Typography>
         <VolunteerActivismRounded
-          sx={{ width:"30px", height:"30px" ,display: { xs: "block", sm: "none" } }}
+          sx={{
+            width: "30px",
+            height: "30px",
+            display: { xs: "block", sm: "none" },
+          }}
         />
         <Search>
           <InputBase placeholder="search..." />
@@ -35,8 +68,20 @@ const Navbar = () => {
           <Badge badgeContent={3} color="error">
             <Notifications />
           </Badge>
-          <Avatar sx={{width:"30px", height:"30px"}} alt="Remy Sharp" src={user} />
+          <Avatar
+            sx={{ width: "30px", height: "30px" }}
+            alt="Remy Sharp"
+            src={user}
+          />
         </Icons>
+        <UserBox>
+          <Avatar
+            sx={{ width: "30px", height: "30px" }}
+            alt="Remy Sharp"
+            src={user}
+          />
+          <Typography variant="span">Sajjad</Typography>
+        </UserBox>
       </StyledToolbar>
     </AppBar>
   );
