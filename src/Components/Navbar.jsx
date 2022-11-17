@@ -55,7 +55,7 @@ const Navbar = () => {
   const [open, setOpen] = useState(false);
 
   return (
-    <AppBar position="sticky">
+    <AppBar position="sticky" sx={{ backgroundColor: "#4267B2" }}>
       <StyledToolbar>
         <Typography
           variant="h5"
@@ -70,7 +70,7 @@ const Navbar = () => {
             display: { xs: "block", sm: "none" },
           }}
         />
-        <Search sx={{}}>
+        <Search sx={{ width: "50%" }}>
           <InputBase placeholder="search..." />
         </Search>
         <Icons>

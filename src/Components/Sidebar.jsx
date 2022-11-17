@@ -24,11 +24,11 @@ import React from "react";
 const Sidebar = () => {
   return (
     <Box
-      flex={1}
+      p={2}
+      flex={1.5}
       sx={{
         display: { xs: "none", sm: "block" },
         boxShadow: "1px 1px 1px 1px rgba(0, 0, 0, 0.1)",
-        paddingRight: "30px",
       }}
     >
       <Box position="fixed">
