@@ -23,7 +23,7 @@ import React from "react";
 
 const Sidebar = () => {
   return (
-    <Box flex={1} sx={{ display: { xs: "none", sm: "block" } }}>
+    <Box flex={1} p={2} sx={{ display: { xs: "none", sm: "block" } }}>
       <List>
         <ListItem disablePadding sx={{ backgroundColor: "rgba(0,0,0,0.2)", borderRadius:"0px 50px 50px 0px" }}>
           <ListItemButton component="a" href="#settings">

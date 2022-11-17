@@ -1,27 +1,59 @@
-import {  Favorite, LocationCity, Map, MoreVert, PlaceRounded, Share } from "@mui/icons-material";
-import { Avatar, Box, Card, CardActions, CardContent, CardHeader, CardMedia, IconButton, Link, Typography } from "@mui/material";
-import React from "react";
+import { AccountCircle, CopyAll, Delete, Edit, Favorite, FavoriteBorder, FavoriteBorderOutlined, LocationCity, Logout, Map, MoreVert, PlaceRounded, Save, SettingsRounded, Share } from "@mui/icons-material";
+import { Avatar, Box, Card, CardActions, CardContent, CardHeader, CardMedia, Checkbox, IconButton, Link, Menu, MenuItem, Typography } from "@mui/material";
+import React, { useState } from "react";
 import isl from "../Images/isl.jpg";
 import user from "../Images/user.jpg";
 
 const Feed = () => {
+  const [open, setOpen] = useState(false);
   return (
-    <Box flex={4} p={2}>
+    <Box flex={4} p={2} >
     <Card>
       <CardHeader sx={{backgroundImage: "linear-gradient(lightgrey, white)"}}
         avatar={
-          <Avatar sx={{ bgcolor: "red" }} src={user}>
-            R
-          </Avatar>
+          <Avatar src={user}/>
         }
         action={
-          <IconButton aria-label="settings">
-            <MoreVert />
+          <IconButton aria-label="settings" sx={{ p: 0 }}>
+            <MoreVert onClick={(e) => setOpen(true)} />
           </IconButton>
         }
         title="Sajjad Saroya"
         subheader="November 16, 2022 - Islamabad"
         />
+        <Menu
+        id="demo-positioned-menu"
+        aria-labelledby="demo-positioned-button"
+        sx={{ mt: "45px" }}
+        open={open}
+        onClose={(e) => setOpen(false)}
+        anchorOrigin={{
+          vertical: "top",
+          horizontal: "center",
+        }}
+        transformOrigin={{
+          vertical: "top",
+          horizontal: "right",
+        }}
+        sx={{ marginTop: "40px" }}
+      >
+        <MenuItem>
+          <Delete />
+          Delete
+        </MenuItem>
+        <MenuItem>
+          <Edit />
+          Edit
+        </MenuItem>
+        <MenuItem>
+          <Save />
+          Save
+        </MenuItem>
+        <MenuItem>
+          <CopyAll/>
+          Copy Link
+        </MenuItem>
+      </Menu>
       {/* <CardContent sx={{display:"flex", alignItems:"center"}}><PlaceRounded/>Islamabad</CardContent> */}
       <CardMedia
         component="img"
@@ -41,13 +73,14 @@ const Feed = () => {
       </CardContent>
       <CardActions disableSpacing sx={{backgroundImage: "linear-gradient(white, lightgrey)"}}>
         <IconButton aria-label="add to favorites">
-          <Favorite />
+       <Checkbox icon={<FavoriteBorderOutlined/>} checkedIcon={<Favorite/>}/>
         </IconButton>
         <IconButton aria-label="share">
           <Share />
         </IconButton>
       </CardActions>
     </Card>
+    
     </Box>
   );
 };
