@@ -46,7 +46,7 @@ const Add = () => {
           backgroundColor: "#4267B2",
           position: "fixed",
           bottom: 20,
-          left: { xs: "calc(50% - 25px)", md: 30 },
+          left: { xs: "calc(80% - 25px)", md: 30 },
         }}
       >
         <Fab color="primary" aria-label="add">
@@ -54,7 +54,7 @@ const Add = () => {
         </Fab>
       </Tooltip>
       <StyledModal open={open} onClose={(e) => setOpen(false)}>
-        <Box width={400} height={260} bgcolor={"background.default"} color="text.primary" borderRadius={5} p={3}>
+        <Box width={300} height={260} bgcolor={"background.default"} color="text.primary" borderRadius={5} p={3}>
           <Typography variant="h6" color="#4267B2" textAlign="center">
             Create Post
           </Typography>
