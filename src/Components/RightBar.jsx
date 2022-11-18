@@ -17,7 +17,7 @@ const RightBar = () => {
   return (
     <Box flex={2} p={1} sx={{ display: { xs: "none", sm: "block" } }}>
       <Box position="fixed" sx={{ padding: "10px" }}>
-        <Typography variant="h6" fontWeight={300} color=" #4267B2">
+        <Typography variant="h6" fontWeight={200} color=" #4267B2">
           Online Friends
         </Typography>
         <AvatarGroup max={7}>
