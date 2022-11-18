@@ -8,8 +8,9 @@ import user from "../Images/user.jpg";
 const Post = () => {
 const [open, setOpen] = useState(false);
   return (
-    <Card sx={{marginTop:"10px"}}>
-    <CardHeader sx={{backgroundImage: "linear-gradient(lightgrey, white)"}}
+    <Card sx={{marginTop:"10px"}} bgcolor={"background.default"} color="text.primary">
+    <CardHeader 
+    // sx={{backgroundImage: "linear-gradient(lightgrey, white)"}}
       avatar={
         <Avatar src={user}/>
       }
@@ -71,7 +72,8 @@ const [open, setOpen] = useState(false);
       #like #psychology #introvert #quotes #lifestyle #personalities</Link>
       </Typography>
     </CardContent>
-    <CardActions disableSpacing sx={{backgroundImage: "linear-gradient(white, lightgrey)"}}>
+    <CardActions disableSpacing >
+    {/* sx={{backgroundImage: "linear-gradient(white, lightgrey)"}} */}
       <IconButton aria-label="add to favorites">
      <Checkbox icon={<FavoriteBorderOutlined/>} checkedIcon={<Favorite sx={{color:"crimson"}}/>}/>
       </IconButton>

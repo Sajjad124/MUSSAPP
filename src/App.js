@@ -1,10 +1,10 @@
-import * as React from "react";
 import Sidebar from "./Components/Sidebar";
 import Feed from "./Components/Feed";
 import RightBar from "./Components/RightBar";
-import { Box, Stack } from "@mui/material";
+import { Box, createTheme, Stack, ThemeProvider } from "@mui/material";
 import Navbar from "./Components/Navbar";
-
+import Add from "./Components/Add";
+import { useState } from "react";
 // import theme from "./theme";
 // import "@fontsource/roboto/300.css";
 // import "@fontsource/roboto/400.css";
@@ -13,15 +13,25 @@ import Navbar from "./Components/Navbar";
 // import styled from "@emotion/styled";
 
 function App() {
+  const [mode, setMode] = useState("light");
+
+  const darkTheme = createTheme({
+    palette: {
+      mode: mode,
+    },
+  });
   return (
-    <Box>
-      <Navbar />
-      <Stack direction="row"  justifyContent="space-between">
-        <Sidebar />
-        <Feed />
-        <RightBar />
-      </Stack>
-    </Box>
+    <ThemeProvider theme={darkTheme}>
+      <Box bgcolor={"background.default"} color="text.primary">
+        <Navbar />
+        <Stack direction="row" spacing="2" justifyContent="space-between">
+          <Sidebar setMode={setMode} mode={mode} />
+          <Feed />
+          <RightBar />
+        </Stack>
+        <Add />
+      </Box>
+    </ThemeProvider>
   );
 }
 export default App;

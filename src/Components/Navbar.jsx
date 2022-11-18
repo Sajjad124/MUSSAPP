@@ -54,8 +54,9 @@ const UserBox = styled(Box)(({ theme }) => ({
 const Navbar = () => {
   const [open, setOpen] = useState(false);
 
+  // sx={{ backgroundColor: "#4267B2" }}
   return (
-    <AppBar position="sticky" sx={{ backgroundColor: "#4267B2" }}>
+    <AppBar position="sticky">
       <StyledToolbar>
         <Typography
           variant="h5"
