@@ -41,12 +41,25 @@ const Sidebar = ({ mode, setMode }) => {
             // }}
           >
             <ListItemButton component="a" href="#settings">
-              <ListItemIcon>
-                <DarkMode />
-              </ListItemIcon>
-              <Switch
-                onChange={(e) => setMode(mode === "light" ? "dark" : "light")}
-              />
+              <Box
+                sx={{
+                  display: { xs: "none", sm: "block" },
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  borderRadius: "10px",
+                  padding: "5px",
+                  boxShadow: "1px 1px 6px 3px rgba(0, 0, 0, 0.2)",
+                }}
+              >
+                <ListItemIcon>
+                  <DarkMode />
+                </ListItemIcon>
+
+                <Switch
+                  onChange={(e) => setMode(mode === "light" ? "dark" : "light")}
+                />
+              </Box>
             </ListItemButton>
           </ListItem>
           <Divider />

@@ -73,9 +73,16 @@ const Navbar = ({ mode, setMode }) => {
             display: { xs: "block", sm: "none" },
           }}
         />
-        <Switch
-          onChange={(e) => setMode(mode === "light" ? "dark" : "light")}
-        />
+        <Box
+          sx={{
+            display: { xs: "block", sm: "none" },
+            // boxShadow: "1px 1px 1px 1px rgba(0, 0, 0, 0.1)",
+          }}
+        >
+          <Switch
+            onChange={(e) => setMode(mode === "light" ? "dark" : "light")}
+          />
+        </Box>
         <Search sx={{ width: "50%" }}>
           <InputBase placeholder="search..." />
         </Search>
