@@ -17,7 +17,9 @@ import {
   Box,
   Menu,
   MenuItem,
+  Switch,
 } from "@mui/material";
+import { DarkMode } from "@mui/icons-material";
 
 import React, { useState } from "react";
 import user from "../Images/user.jpg";
@@ -51,7 +53,7 @@ const UserBox = styled(Box)(({ theme }) => ({
   },
 }));
 
-const Navbar = () => {
+const Navbar = ({ mode, setMode }) => {
   const [open, setOpen] = useState(false);
 
   // sx={{ backgroundColor: "#4267B2" }}
@@ -70,6 +72,9 @@ const Navbar = () => {
             height: "30px",
             display: { xs: "block", sm: "none" },
           }}
+        />
+        <Switch
+          onChange={(e) => setMode(mode === "light" ? "dark" : "light")}
         />
         <Search sx={{ width: "50%" }}>
           <InputBase placeholder="search..." />
