@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import user from "../Images/user.jpg";
+import "./Add.css";
 import {
   Avatar,
   Box,
@@ -40,6 +41,7 @@ const Add = () => {
   return (
     <>
       <Tooltip
+        className="tooltip"
         onClick={(e) => setOpen(true)}
         title="Add New Post"
         sx={{
@@ -54,7 +56,14 @@ const Add = () => {
         </Fab>
       </Tooltip>
       <StyledModal open={open} onClose={(e) => setOpen(false)}>
-        <Box width={300} height={260} bgcolor={"background.default"} color="text.primary" borderRadius={5} p={3}>
+        <Box
+          width={300}
+          height={260}
+          bgcolor={"background.default"}
+          color="text.primary"
+          borderRadius={5}
+          p={3}
+        >
           <Typography variant="h6" color="#4267B2" textAlign="center">
             Create Post
           </Typography>

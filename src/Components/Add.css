@@ -1,0 +1,6 @@
+.tooltip {
+  background-color: "#4267B2";
+  position: "fixed";
+  bottom: "20";
+  left: "{ xs: " calc(80% - 25px) ", md: 30 }";
+}
