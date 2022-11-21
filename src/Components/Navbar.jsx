@@ -19,7 +19,6 @@ import {
   MenuItem,
   Switch,
 } from "@mui/material";
-import { DarkMode } from "@mui/icons-material";
 
 import React, { useState } from "react";
 import user from "../Images/user.jpg";
@@ -56,9 +55,8 @@ const UserBox = styled(Box)(({ theme }) => ({
 const Navbar = ({ mode, setMode }) => {
   const [open, setOpen] = useState(false);
 
-  // sx={{ backgroundColor: "#4267B2" }}
   return (
-    <AppBar position="sticky">
+    <AppBar position="sticky" sx={{ backgroundColor: "#4267B2" }}>
       <StyledToolbar>
         <Typography
           variant="h5"
@@ -122,7 +120,7 @@ const Navbar = ({ mode, setMode }) => {
             alt="Remy Sharp"
             src={user}
           />
-          <Typography variant="span">Sajjad</Typography>
+          {/* <Typography variant="span">Sajjad</Typography> */}
         </UserBox>
       </StyledToolbar>
       <Menu

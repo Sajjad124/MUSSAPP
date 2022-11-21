@@ -34,7 +34,7 @@ const Login = () => {
       <Card
         sx={{
           padding: "10px",
-          boxShadow: "1px 1px 3px 2px rgba(0, 0, 0, 0.1)",
+          boxShadow: "1px 1px 7px 4px rgba(0, 0, 0, 0.1)",
         }}
       >
         <CardContent>
